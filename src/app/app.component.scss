@@ -1,0 +1,81 @@
+.text-over-4{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.articles{
+  overflow: hidden;
+  &-grid{
+    padding: 8px;
+    position: relative;
+  }
+  &-grid:first-child{
+    transition:all ease .5s;
+  }
+  &-grid:nth-child(2){
+    transition:all ease .8s;
+  }
+  &-grid:nth-child(3){
+    transition:all ease 1.1s;
+  }
+  &.loaded > &-grid{
+    right:-100%
+  }
+  &:not(.loaded) > &-grid{
+    right:0
+  }
+}
+
+.svg-wrapper {
+  display: block !important;
+  min-height: 100%;
+}
+
+.svg-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.svg-wrapper svg > a path, .svg-wrapper svg g > a path {
+  transition: all ease-in-out 300ms;
+  -webkit-transition: all ease-in-out 300ms;
+  -moz-transition: all ease-in-out 300ms;
+  -ms-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+}
+
+.svg-wrapper svg > a:hover path, .svg-wrapper svg g > a:hover path {
+  fill: blue;
+}
+.articles-title {
+  border-bottom: 1px solid #d9d9d9;
+  h2 {
+    font-size: 24px;
+    color: #1c3b53;
+  }
+}
+
+path{
+  fill:#324b5f
+}
+a.deActive path{
+  fill: rgb(50 75 95 / 85%)
+}
+a.active path {
+  fill: #001f38
+}
+.darya{
+  fill:#009eff
+}
+g path{
+  fill:white;
+}
